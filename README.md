@@ -7,11 +7,17 @@ Translated to [go](https://go.dev/)
 
 ### How to Use
 - [Install go](https://go.dev/doc/install)
-- Then run:
+- For Five Card run:
 ```
-go install github.com/SixofClubsss/go-pokerRanker@latest
+go install github.com/SixofClubsss/go-pokerRanker/FiveCard@latest
 cd go/bin
-./go-pokerRanker
+./FiveCard
+```
+- For Holdem run:
+```
+go install github.com/SixofClubsss/go-pokerRanker/Holdem@latest
+cd go/bin
+./Holdem
 ```
 This assumes default go path
 
