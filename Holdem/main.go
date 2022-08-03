@@ -9,6 +9,8 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/fatih/color"
 )
 
 var control int
@@ -154,15 +156,26 @@ func cardEquiv(card int) string { /// Card #s to unicode cards
 }
 
 func showMenu() { /// Start Menu
+	dReamText := color.New(color.Bold, color.BgBlack).PrintlnFunc()
+	optionTextBlack := color.New(color.BgWhite, color.FgBlack).PrintFunc()
+	optionTextRed := color.New(color.BgWhite, color.FgRed).PrintFunc()
 	fmt.Println()
-	fmt.Println("  dReam Tables Poker Hand Ranker  ")
-	fmt.Println()
+	dReamText("  dReam Tables Poker Hand Ranker  ")
+	///fmt.Println()
 	for {
-		fmt.Println("♠♥♣♦     Select Option #      ♦♣♥♠")
+		optionTextBlack("♠")
+		optionTextRed("♥")
+		optionTextBlack("♣")
+		optionTextRed("♦")
+		optionTextBlack("     Select Option #      ")
+		optionTextRed("♦")
+		optionTextBlack("♣")
+		optionTextRed("♥")
+		optionTextBlack("♠\n")
 		fmt.Println()
 		fmt.Println("1. Compare Hands")
 		fmt.Println("9. Exit")
-		fmt.Print("Option: ")
+		fmt.Print("\nOption: ")
 		fmt.Scan(&control)
 		if control == 1 || control == 9 {
 			break
@@ -175,15 +188,20 @@ func showMenu() { /// Start Menu
 func another() {
 
 	if !skip {
-		fmt.Println("Compare more hands? y/n")
+		fmt.Print("Compare more hands? ")
+		optionTextGreen := color.New(color.FgGreen).PrintFunc()
+		optionTextRed := color.New(color.FgRed).PrintlnFunc()
+		optionTextGreen("y")
+		fmt.Print("/")
+		optionTextRed("n")
 		for {
 			fmt.Scan(&confirm)
 
-			if confirm == "y" {
+			if confirm == "y" || confirm == "Y" {
 				control = 1
 				break
 
-			} else if confirm == "n" {
+			} else if confirm == "n" || confirm == "N" {
 				control = 9
 				break
 			} else {
@@ -200,8 +218,8 @@ func main() {
 		another()
 		skip = false
 		if control == 9 { /// Check for exit
-			fmt.Print("Exiting...")
-			fmt.Println(" 🃖")
+			sign := color.New(color.Bold, color.BgWhite, color.FgRed).PrintlnFunc()
+			sign("Exiting... 🃖 ")
 			break
 		}
 		control = 0

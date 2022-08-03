@@ -10,6 +10,8 @@ package main
 import (
 	"fmt"
 	"sort"
+
+	"github.com/fatih/color"
 )
 
 func compareAll() { /// Main compare to determine winner
@@ -17,7 +19,9 @@ func compareAll() { /// Main compare to determine winner
 	winningRank := []int{p1Rank, p2Rank, p3Rank, p4Rank, p5Rank, p6Rank}
 	sort.Ints(winningRank)
 
-	fmt.Println("Community:", cardEquiv(communityCard[0]), cardEquiv(communityCard[1]), cardEquiv(communityCard[2]), cardEquiv(communityCard[3]), cardEquiv(communityCard[4]), communityCard)
+	comText := color.New(color.Bold, color.FgGreen).PrintlnFunc()
+
+	comText("Community:", cardEquiv(communityCard[0]), cardEquiv(communityCard[1]), cardEquiv(communityCard[2]), cardEquiv(communityCard[3]), cardEquiv(communityCard[4]), communityCard)
 	if totalHands >= 2 { /// Print results
 		fmt.Println("Player 1 has:", cardEquiv(p1HandRaw[0]), cardEquiv(p1HandRaw[1]), p1HandRaw, handToText(p1Rank), p1HighCardArr)
 		fmt.Println("Player 2 has:", cardEquiv(p2HandRaw[0]), cardEquiv(p2HandRaw[1]), p2HandRaw, handToText(p2Rank), p2HighCardArr)
