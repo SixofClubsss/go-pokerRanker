@@ -185,7 +185,7 @@ func showMenu() { /// Start Menu
 	}
 }
 
-func another() {
+func another() { /// Break loop
 
 	if !skip {
 		fmt.Print("Compare more hands? ")
