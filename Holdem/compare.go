@@ -54,7 +54,7 @@ func compareAll() { /// Main compare to determine winner
 		fmt.Println("Player 6 Wins Outright")
 	} else {
 
-		highestPair := []int{p1Rank, p2Rank, p3Rank, p4Rank, p5Rank, p6Rank}
+		highestPair := []int{p1HighPair, p2HighPair, p3HighPair, p4HighPair, p5HighPair, p6HighPair}
 		sort.Ints(highestPair)
 
 		if p1Rank != winningRank[0] || (winningRank[0] == 9 && p1HighPair != highestPair[5]) { /// If player hand is not the higest rank or if doesn't have high pair stip cards
@@ -318,6 +318,8 @@ func compareAll() { /// Main compare to determine winner
 			}
 
 		} else {
+			fmt.Println(p1HighCardArr)
+			fmt.Println(p2HighCardArr)
 			fmt.Println("Push")
 		}
 	}
@@ -327,7 +329,7 @@ func suitSplit(card int) { /// Splits cards inside getHand#() funcs
 	switch card {
 	////// Spades
 	case 1:
-		arrSplit[0] = 1
+		arrSplit[0] = 14
 		arrSplit[1] = 0
 
 	case 2:
@@ -380,7 +382,7 @@ func suitSplit(card int) { /// Splits cards inside getHand#() funcs
 
 		////// Hearts
 	case 14:
-		arrSplit[0] = 1
+		arrSplit[0] = 14
 		arrSplit[1] = 1
 
 	case 15:
@@ -433,7 +435,7 @@ func suitSplit(card int) { /// Splits cards inside getHand#() funcs
 
 		////// Clubs
 	case 27:
-		arrSplit[0] = 1
+		arrSplit[0] = 14
 		arrSplit[1] = 2
 
 	case 28:
@@ -486,7 +488,7 @@ func suitSplit(card int) { /// Splits cards inside getHand#() funcs
 
 		////// Diamonds
 	case 40:
-		arrSplit[0] = 1
+		arrSplit[0] = 14
 		arrSplit[1] = 3
 
 	case 41:

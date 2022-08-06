@@ -185,29 +185,8 @@ func getHand1() int { /// Splitting card value and suit for making individual ha
 	suitSplit(p1HandRaw[1])
 	pc2 = []int{arrSplit[0], arrSplit[1]}
 
-	Rank := compareMine()
+	Rank := compareThese()
 	copy(p1HighCardArr[:], fHighCardArr)
-
-	if p1HighCardArr[0] == 1 {
-		p1HighCardArr[0] = 14
-	}
-
-	if p1HighCardArr[1] == 1 {
-		p1HighCardArr[1] = 14
-	}
-
-	if p1HighCardArr[2] == 1 {
-		p1HighCardArr[2] = 14
-	}
-
-	if p1HighCardArr[3] == 1 {
-		p1HighCardArr[3] = 14
-	}
-
-	if p1HighCardArr[4] == 1 {
-		p1HighCardArr[4] = 14
-	}
-
 	p1HighPair = getHighPair(p1HighCardArr)
 
 	return Rank
@@ -244,29 +223,8 @@ func getHand2() int {
 	suitSplit(p2HandRaw[1])
 	pc2 = []int{arrSplit[0], arrSplit[1]}
 
-	Rank := compareMine()
+	Rank := compareThese()
 	copy(p2HighCardArr[:], fHighCardArr)
-
-	if p2HighCardArr[0] == 1 {
-		p2HighCardArr[0] = 14
-	}
-
-	if p2HighCardArr[1] == 1 {
-		p2HighCardArr[1] = 14
-	}
-
-	if p2HighCardArr[2] == 1 {
-		p2HighCardArr[2] = 14
-	}
-
-	if p2HighCardArr[3] == 1 {
-		p2HighCardArr[3] = 14
-	}
-
-	if p2HighCardArr[4] == 1 {
-		p2HighCardArr[4] = 14
-	}
-
 	p2HighPair = getHighPair(p2HighCardArr)
 
 	return Rank
@@ -303,29 +261,8 @@ func getHand3() int {
 	suitSplit(p3HandRaw[1])
 	pc2 = []int{arrSplit[0], arrSplit[1]}
 
-	Rank := compareMine()
+	Rank := compareThese()
 	copy(p3HighCardArr[:], fHighCardArr)
-
-	if p3HighCardArr[0] == 1 {
-		p3HighCardArr[0] = 14
-	}
-
-	if p3HighCardArr[1] == 1 {
-		p3HighCardArr[1] = 14
-	}
-
-	if p3HighCardArr[2] == 1 {
-		p3HighCardArr[2] = 14
-	}
-
-	if p3HighCardArr[3] == 1 {
-		p3HighCardArr[3] = 14
-	}
-
-	if p3HighCardArr[4] == 1 {
-		p3HighCardArr[4] = 14
-	}
-
 	p3HighPair = getHighPair(p3HighCardArr)
 
 	return Rank
@@ -362,29 +299,8 @@ func getHand4() int {
 	suitSplit(p4HandRaw[1])
 	pc2 = []int{arrSplit[0], arrSplit[1]}
 
-	Rank := compareMine()
+	Rank := compareThese()
 	copy(p4HighCardArr[:], fHighCardArr)
-
-	if p4HighCardArr[0] == 1 {
-		p4HighCardArr[0] = 14
-	}
-
-	if p4HighCardArr[1] == 1 {
-		p4HighCardArr[1] = 14
-	}
-
-	if p4HighCardArr[2] == 1 {
-		p4HighCardArr[2] = 14
-	}
-
-	if p4HighCardArr[3] == 1 {
-		p4HighCardArr[3] = 14
-	}
-
-	if p4HighCardArr[4] == 1 {
-		p4HighCardArr[4] = 14
-	}
-
 	p4HighPair = getHighPair(p4HighCardArr)
 
 	return Rank
@@ -421,29 +337,8 @@ func getHand5() int {
 	suitSplit(p5HandRaw[1])
 	pc2 = []int{arrSplit[0], arrSplit[1]}
 
-	Rank := compareMine()
+	Rank := compareThese()
 	copy(p5HighCardArr[:], fHighCardArr)
-
-	if p5HighCardArr[0] == 1 {
-		p5HighCardArr[0] = 14
-	}
-
-	if p5HighCardArr[1] == 1 {
-		p5HighCardArr[1] = 14
-	}
-
-	if p5HighCardArr[2] == 1 {
-		p5HighCardArr[2] = 14
-	}
-
-	if p5HighCardArr[3] == 1 {
-		p5HighCardArr[3] = 14
-	}
-
-	if p5HighCardArr[4] == 1 {
-		p5HighCardArr[4] = 14
-	}
-
 	p5HighPair = getHighPair(p5HighCardArr)
 
 	return Rank
@@ -480,29 +375,8 @@ func getHand6() int {
 	suitSplit(p6HandRaw[1])
 	pc2 = []int{arrSplit[0], arrSplit[1]}
 
-	Rank := compareMine()
+	Rank := compareThese()
 	copy(p6HighCardArr[:], fHighCardArr)
-
-	if p6HighCardArr[0] == 1 {
-		p6HighCardArr[0] = 14
-	}
-
-	if p6HighCardArr[1] == 1 {
-		p6HighCardArr[1] = 14
-	}
-
-	if p6HighCardArr[2] == 1 {
-		p6HighCardArr[2] = 14
-	}
-
-	if p6HighCardArr[3] == 1 {
-		p6HighCardArr[3] = 14
-	}
-
-	if p6HighCardArr[4] == 1 {
-		p6HighCardArr[4] = 14
-	}
-
 	p6HighPair = getHighPair(p6HighCardArr)
 
 	return Rank
@@ -516,7 +390,7 @@ func makeHand(h, s []int) int { /// Determines hand rank after suit slipt
 	sort.Ints(pHand)
 
 	/// Royal flush
-	if pHand[0] == 1 && pHand[1] == 10 && pHand[2] == 11 && pHand[3] == 12 && pHand[4] == 13 &&
+	if pHand[0] == 10 && pHand[1] == 11 && pHand[2] == 12 && pHand[3] == 13 && pHand[4] == 14 &&
 		pSuits[0] == pSuits[1] && pSuits[0] == pSuits[2] && pSuits[0] == pSuits[3] && pSuits[0] == pSuits[4] {
 
 		return 1
@@ -524,8 +398,10 @@ func makeHand(h, s []int) int { /// Determines hand rank after suit slipt
 	}
 
 	/// Straight flush
-	if pHand[0]+1 == pHand[1] && pHand[1]+1 == pHand[2] && pHand[2]+1 == pHand[3] && pHand[3]+1 == pHand[4] && pHand[0]+4 == pHand[4] &&
-		pSuits[0] == pSuits[1] && pSuits[0] == pSuits[2] && pSuits[0] == pSuits[3] && pSuits[0] == pSuits[4] {
+	if (pHand[0]+1 == pHand[1] && pHand[1]+1 == pHand[2] && pHand[2]+1 == pHand[3] && pHand[3]+1 == pHand[4] && pHand[0]+4 == pHand[4] &&
+		pSuits[0] == pSuits[1] && pSuits[0] == pSuits[2] && pSuits[0] == pSuits[3] && pSuits[0] == pSuits[4]) ||
+		(pHand[0] == 2 && pHand[1] == 3 && pHand[2] == 4 && pHand[3] == 5 && pHand[4] == 14 &&
+			pSuits[0] == pSuits[1] && pSuits[0] == pSuits[2] && pSuits[0] == pSuits[3] && pSuits[0] == pSuits[4]) {
 
 		return 2
 	}
@@ -552,7 +428,7 @@ func makeHand(h, s []int) int { /// Determines hand rank after suit slipt
 
 	/// Straight
 	if pHand[0]+1 == pHand[1] && pHand[1]+1 == pHand[2] && pHand[2]+1 == pHand[3] && pHand[3]+1 == pHand[4] && pHand[0]+4 == pHand[4] ||
-		pHand[0] == 1 && pHand[1] == 10 && pHand[2] == 11 && pHand[3] == 12 && pHand[4] == 13 {
+		pHand[0] == 2 && pHand[1] == 3 && pHand[2] == 4 && pHand[3] == 5 && pHand[4] == 14 {
 		return 6
 	}
 
@@ -597,204 +473,21 @@ func getHighPair(h [5]int) int { /// Gets high pair from hand
 	return highPair
 }
 
-func isPaired(h []int) int { /// Gets high pair slice
+func findBest(r int, fR, h []int) []int { /// If better hand exists when comparing
 
-	var isPaired int
-
-	for i := 0; i < 4; i++ {
-		if h[i] == h[i+1] {
-			if h[i] > isPaired {
-				isPaired = h[i]
-			}
-		}
-	}
-
-	return isPaired
-}
-
-func searchAllRanks(r int, h, s []int) []int { /// Rank specific outcome in search
-
-	var swap = h
-	var swapSuit = s
+	var hand = h
+	var swap = fR
 	hole := []int{pc1[0], pc2[0]}
-	holeSuit := []int{pc1[1], pc2[1]}
-	paired := isPaired(swap)
+	sort.Ints(hole)
+	sort.Ints(swap)
+	sort.Ints(hand)
 	/// Debug
 	// red := color.New(color.FgHiRed).PrintlnFunc()
-	// red("Comm: %s", swap)
+	// red("Comm:", swap)
 	// cyan := color.New(color.FgHiCyan).PrintlnFunc()
-	// cyan("Hole: %s", hole)
+	// cyan("Hole:", hole)
 	// green := color.New(color.FgHiGreen).PrintlnFunc()
-	// green("Rank: %s", r)
-
-	/// If flush
-	if r == 5 {
-		if hole[0] > swap[4] && hole[1] > hole[0] && holeSuit[0] == swapSuit[0] && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[2], swap[3], swap[4], hole[0], hole[1]}
-		} else if hole[0] > swap[2] && hole[1] > swap[3] && holeSuit[0] == swapSuit[0] && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[0], swap[1], hole[0], hole[1], swap[4]}
-		} else if hole[0] > swap[1] && hole[1] > swap[2] && holeSuit[0] == swapSuit[0] && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[0], hole[0], hole[1], swap[3], swap[4]}
-		} else if hole[0] > swap[0] && hole[1] > swap[1] && holeSuit[0] == swapSuit[0] && holeSuit[1] == swapSuit[0] {
-			swap = []int{hole[0], hole[1], swap[2], swap[3], swap[4]}
-
-		} else if hole[1] > swap[4] && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[1]}
-		} else if hole[1] > swap[3] && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], swap[3], hole[1], swap[4]}
-		} else if hole[1] > swap[2] && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], hole[1], swap[3], swap[4]}
-		} else if hole[1] > swap[1] && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[1], hole[1], swap[2], swap[3], swap[4]}
-		} else if hole[1] > swap[0] && holeSuit[1] == swapSuit[0] {
-			swap = []int{hole[1], swap[1], swap[2], swap[3], swap[4]}
-		} else if hole[1] == 1 && swap[4] <= 13 && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[1]}
-		} else if hole[1] == 1 && swap[3] <= 13 && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], swap[3], hole[1], swap[4]}
-		} else if hole[1] == 1 && swap[2] <= 13 && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], hole[1], swap[3], swap[4]}
-		} else if hole[1] == 1 && swap[1] <= 13 && holeSuit[1] == swapSuit[0] {
-			swap = []int{swap[1], hole[1], swap[2], swap[3], swap[4]}
-		} else if hole[1] == 1 && swap[0] <= 13 && holeSuit[1] == swapSuit[0] {
-			swap = []int{hole[1], swap[1], swap[2], swap[3], swap[4]}
-		}
-
-		if hole[0] > swap[4] && holeSuit[0] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[0]}
-		} else if hole[0] > swap[3] && holeSuit[0] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], swap[3], hole[0], swap[4]}
-		} else if hole[0] > swap[2] && holeSuit[0] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], hole[0], swap[3], swap[4]}
-		} else if hole[0] > swap[1] && holeSuit[0] == swapSuit[0] {
-			swap = []int{swap[1], hole[0], swap[2], swap[3], swap[4]}
-		} else if hole[0] > swap[0] && holeSuit[0] == swapSuit[0] {
-			swap = []int{hole[0], swap[1], swap[2], swap[3], swap[4]}
-		} else if hole[0] == 1 && swap[4] <= 13 && holeSuit[0] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[0]}
-		} else if hole[0] == 1 && swap[3] <= 13 && holeSuit[0] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], swap[3], hole[0], swap[4]}
-		} else if hole[0] == 1 && swap[2] <= 13 && holeSuit[0] == swapSuit[0] {
-			swap = []int{swap[1], swap[2], hole[0], swap[3], swap[4]}
-		} else if hole[0] == 1 && swap[1] <= 13 && holeSuit[0] == swapSuit[0] {
-			swap = []int{swap[1], hole[0], swap[2], swap[3], swap[4]}
-		} else if hole[0] == 1 && swap[0] <= 13 && holeSuit[0] == swapSuit[0] {
-			swap = []int{hole[0], swap[1], swap[2], swap[3], swap[4]}
-		}
-	}
-
-	sort.Ints(hole)
-
-	/// If high card
-	if r == 10 {
-		if hole[0] > swap[0] && swap[0] != 1 {
-			swap[0] = hole[0]
-		} else if hole[0] > swap[1] {
-			swap[1] = hole[0]
-		} else if hole[0] > swap[2] {
-			swap[2] = hole[0]
-		} else if hole[0] > swap[3] {
-			swap[3] = hole[0]
-		} else if hole[0] > swap[4] {
-			swap[4] = hole[0]
-		} else if hole[0] == 1 && swap[0] <= 13 {
-			swap[0] = hole[0]
-		} else if hole[0] == 1 && swap[1] <= 13 {
-			swap[1] = hole[0]
-		} else if hole[0] == 1 && swap[2] <= 13 {
-			swap[2] = hole[0]
-		} else if hole[0] == 1 && swap[3] <= 13 {
-			swap[3] = hole[0]
-		} else if hole[0] == 1 && swap[4] <= 13 {
-			swap[4] = hole[0]
-		}
-
-		if hole[1] > swap[0] && swap[0] != 1 {
-			swap[0] = hole[1]
-		} else if hole[1] > swap[1] && swap[1] != hole[0] {
-			swap[1] = hole[1]
-		} else if hole[1] > swap[2] && swap[2] != hole[0] {
-			swap[2] = hole[1]
-		} else if hole[1] > swap[3] && swap[3] != hole[0] {
-			swap[3] = hole[1]
-		} else if hole[1] > swap[4] {
-			swap[4] = hole[1]
-		} else if hole[1] > swap[4] && swap[4] == hole[0] {
-			swap = []int{swap[2], swap[3], swap[4], hole[0], hole[1]}
-		} else if hole[1] == 1 && swap[0] <= 13 && swap[0] != 1 {
-			swap[0] = hole[1]
-		} else if hole[1] == 1 && swap[1] <= 13 && swap[1] != 1 {
-			swap[1] = hole[1]
-		} else if hole[1] == 1 && swap[2] <= 13 && swap[2] != 1 {
-			swap[2] = hole[1]
-		} else if hole[1] == 1 && swap[3] <= 13 && swap[3] != 1 {
-			swap[3] = hole[1]
-		} else if hole[1] == 1 && swap[4] <= 13 && swap[4] != 1 {
-			swap[4] = hole[1]
-		}
-
-	}
-	/// If pair, two pair, three of a kind, four of a kind
-	if r == 9 || r == 8 || r == 7 || r == 3 {
-
-		if hole[0] == hole[1] {
-			if hole[0] > swap[0] && swap[0] == swap[1] && swap[1] != swap[2] {
-				swap = []int{hole[0], hole[1], swap[2], swap[3], swap[4]}
-			} else if hole[0] > swap[1] && swap[1] == swap[2] && swap[2] != swap[3] {
-				swap = []int{swap[0], hole[0], hole[1], swap[3], swap[4]}
-			} else if hole[0] > swap[2] && swap[2] == swap[3] && swap[3] != swap[4] {
-				swap = []int{swap[0], swap[1], hole[0], hole[1], swap[4]}
-			} else if hole[0] > swap[3] && swap[3] == swap[4] {
-				swap = []int{swap[0], swap[1], swap[2], hole[0], hole[1]}
-			}
-
-		} else {
-			if hole[0] > swap[4] && swap[4] != swap[3] && swap[4] != swap[2] && swap[4] != swap[1] && swap[4] != swap[0] {
-				swap[4] = hole[0]
-			} else if hole[0] > swap[3] && swap[3] != swap[4] && swap[3] != swap[2] && swap[3] != swap[1] && swap[3] != swap[0] {
-				swap[3] = hole[0]
-			} else if hole[0] > swap[2] && swap[2] != swap[4] && swap[2] != swap[3] && swap[2] != swap[1] && swap[2] != swap[0] {
-				swap[2] = hole[0]
-			} else if hole[0] > swap[1] && swap[1] != swap[4] && swap[1] != swap[3] && swap[1] != swap[2] && swap[1] != swap[0] {
-				swap[1] = hole[0]
-			} else if hole[0] > swap[0] && swap[0] != swap[4] && swap[0] != swap[3] && swap[0] != swap[2] && swap[0] != swap[1] && swap[0] != 1 {
-				swap[0] = hole[0]
-			} else if hole[0] == 1 && swap[4] <= 13 && swap[4] != swap[3] && swap[4] != swap[2] && swap[4] != swap[1] && swap[4] != swap[0] {
-				swap[4] = hole[0]
-			} else if hole[0] == 1 && swap[3] <= 13 && swap[3] != swap[4] && swap[3] != swap[2] && swap[3] != swap[1] && swap[3] != swap[0] {
-				swap[3] = hole[0]
-			} else if hole[0] == 1 && swap[2] <= 13 && swap[2] != swap[4] && swap[2] != swap[3] && swap[2] != swap[1] && swap[2] != swap[0] {
-				swap[2] = hole[0]
-			} else if hole[0] == 1 && swap[1] <= 13 && swap[1] != swap[4] && swap[1] != swap[3] && swap[1] != swap[2] && swap[1] != swap[0] {
-				swap[1] = hole[0]
-			} else if hole[0] == 1 && swap[0] <= 13 && swap[0] != swap[4] && swap[0] != swap[3] && swap[0] != swap[2] && swap[0] != swap[1] {
-				swap[0] = hole[0]
-			}
-
-			if hole[1] > swap[4] && swap[4] != swap[3] && swap[4] != swap[2] && swap[4] != swap[1] && swap[4] != swap[0] && swap[4] != 1 && hole[1] != paired {
-				swap[4] = hole[1]
-			} else if hole[1] > swap[3] && swap[3] != swap[4] && swap[3] != swap[2] && swap[3] != swap[1] && swap[3] != swap[0] && swap[3] != 1 && hole[1] != paired {
-				swap[3] = hole[1]
-			} else if hole[1] > swap[2] && swap[2] != swap[4] && swap[2] != swap[3] && swap[2] != swap[1] && swap[2] != swap[0] && swap[2] != 1 && hole[1] != paired {
-				swap[2] = hole[1]
-			} else if hole[1] > swap[1] && swap[1] != swap[4] && swap[1] != swap[3] && swap[1] != swap[2] && swap[1] != swap[0] && swap[1] != 1 && hole[1] != paired {
-				swap[1] = hole[1]
-			} else if hole[1] > swap[0] && swap[0] != swap[4] && swap[0] != swap[3] && swap[0] != swap[2] && swap[0] != swap[1] && swap[0] != 1 && hole[1] != paired {
-				swap[0] = hole[1]
-			} else if hole[1] == 1 && swap[4] <= 13 && swap[4] != swap[3] && swap[4] != swap[2] && swap[4] != swap[1] && swap[4] != swap[0] && swap[4] != 1 {
-				swap[4] = hole[1]
-			} else if hole[1] == 1 && swap[3] <= 13 && swap[3] != swap[4] && swap[3] != swap[2] && swap[3] != swap[1] && swap[3] != swap[0] && swap[3] != 1 {
-				swap[3] = hole[1]
-			} else if hole[1] == 1 && swap[2] <= 13 && swap[2] != swap[4] && swap[2] != swap[3] && swap[2] != swap[1] && swap[2] != swap[0] && swap[2] != 1 {
-				swap[2] = hole[1]
-			} else if hole[1] == 1 && swap[1] <= 13 && swap[1] != swap[4] && swap[1] != swap[3] && swap[1] != swap[2] && swap[1] != swap[0] && swap[1] != 1 {
-				swap[1] = hole[1]
-			} else if hole[1] == 1 && swap[0] <= 13 && swap[0] != swap[4] && swap[0] != swap[3] && swap[0] != swap[2] && swap[0] != swap[1] && swap[0] != 1 {
-				swap[0] = hole[1]
-			}
-		}
-
-	}
+	// green("Rank:", r)
 
 	/// If straight or straight flush
 	if r == 6 || r == 2 {
@@ -804,46 +497,67 @@ func searchAllRanks(r int, h, s []int) []int { /// Rank specific outcome in sear
 			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[0]}
 		} else if hole[1] == swap[4]+1 {
 			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[1]}
-		} else if swap[0] == 8 && swap[1] == 9 && swap[2] == 10 && swap[3] == 11 && swap[4] == 12 && hole[0] == swap[4]+1 {
-			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[0]}
-		} else if swap[0] == 8 && swap[1] == 9 && swap[2] == 10 && swap[3] == 11 && swap[4] == 12 && hole[1] == swap[4]+1 {
-			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[1]}
-		} else if swap[0] == 8 && swap[1] == 9 && swap[2] == 10 && swap[3] == 11 && swap[4] == 12 && hole[0] == 1 && hole[1] == swap[4]+2 {
-			swap = []int{swap[2], swap[3], swap[4], hole[1], hole[0]}
 		}
-
-	}
-
-	/// If full house
-	if r == 4 && hole[0] == hole[1] {
+		/// If pocket pair
+	} else if hole[0] == hole[1] {
+		if hole[0] > swap[0] && swap[0] == swap[1] && swap[1] != swap[2] {
+			swap = []int{hole[0], hole[1], swap[2], swap[3], swap[4]}
+		} else if hole[0] > swap[1] && swap[1] == swap[2] && swap[2] != swap[3] {
+			swap = []int{swap[0], hole[0], hole[1], swap[3], swap[4]}
+		} else if hole[0] > swap[2] && swap[2] == swap[3] && swap[3] != swap[4] {
+			swap = []int{swap[0], swap[1], hole[0], hole[1], swap[4]}
+		} else if hole[0] > swap[3] && swap[3] == swap[4] {
+			swap = []int{swap[0], swap[1], swap[2], hole[0], hole[1]}
+		}
+		/// If full house
+	} else if r == 4 && hole[0] == hole[1] {
 		if hole[0] > swap[4] && hole[1] > swap[3] && swap[4] != swap[2] {
 			swap = []int{swap[0], swap[1], swap[2], hole[1], hole[0]}
 		} else if hole[0] > swap[0] && hole[1] > swap[1] && swap[0] != swap[2] {
 			swap = []int{hole[0], hole[1], swap[2], swap[3], swap[4]}
 		}
+		/// Left overs
+	} else if r == 10 || r == 9 || r == 8 || r == 7 || r == 5 || r == 4 || r == 3 {
+
+		if hand[4] >= swap[4] && hand[3] >= swap[3] && hand[2] >= swap[2] && hand[1] >= swap[1] && hand[0] >= swap[0] {
+			swap = []int{hand[0], hand[1], hand[2], hand[3], hand[4]}
+		}
+
 	}
 
 	return swap[:]
 
 }
 
-func compareMine() int { /// Search thorugh all hand combinations to find best
+func compareThese() int { /// Search thorugh all hand combinations to find best
+
+	e0Hand := []int{cc1[0], cc2[0], cc3[0], cc4[0], cc5[0]}
+	e0Suits := []int{cc1[1], cc2[1], cc3[1], cc4[1], cc5[1]}
+	fRank := makeHand(e0Hand, e0Suits)
+	fHighCardArr = e0Hand
 
 	/// Two Hole cards
 	e1Hand := []int{cc1[0], cc2[0], cc3[0], pc1[0], pc2[0]}
 	e1Suits := []int{cc1[1], cc2[1], cc3[1], pc1[1], pc2[1]}
-	fRank := makeHand(e1Hand, e1Suits)
-	fHighCardArr = e1Hand
+	nRank := makeHand(e1Hand, e1Suits)
+	if nRank < fRank {
+		fRank = nRank
+		fHighCardArr = e1Hand
+	} else if nRank == fRank {
+		fRank = nRank
+		fHighCardArr = findBest(fRank, fHighCardArr, e1Hand)
+
+	}
 
 	e2Hand := []int{cc1[0], cc2[0], pc1[0], cc4[0], pc2[0]}
 	e2Suits := []int{cc1[1], cc2[1], pc1[1], cc4[1], pc2[1]}
-	nRank := makeHand(e2Hand, e2Suits)
+	nRank = makeHand(e2Hand, e2Suits)
 	if nRank < fRank {
 		fRank = nRank
 		fHighCardArr = e2Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e2Hand, e2Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e2Hand)
 
 	}
 
@@ -855,7 +569,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e3Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e3Hand, e3Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e3Hand)
 
 	}
 
@@ -867,7 +581,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e4Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e4Hand, e4Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e4Hand)
 
 	}
 
@@ -879,7 +593,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e5Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e5Hand, e5Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e5Hand)
 
 	}
 
@@ -891,7 +605,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e6Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e6Hand, e6Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e6Hand)
 
 	}
 
@@ -903,7 +617,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e7Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e7Hand, e7Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e7Hand)
 
 	}
 
@@ -915,7 +629,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e8Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e8Hand, e8Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e8Hand)
 
 	}
 
@@ -927,7 +641,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e9Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e9Hand, e9Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e9Hand)
 
 	}
 
@@ -939,7 +653,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e10Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e10Hand, e10Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e10Hand)
 
 	}
 
@@ -952,7 +666,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e11Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e11Hand, e11Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e11Hand)
 
 	}
 
@@ -964,7 +678,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e12Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e12Hand, e12Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e12Hand)
 
 	}
 
@@ -976,7 +690,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e13Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e13Hand, e13Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e13Hand)
 
 	}
 
@@ -988,7 +702,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e14Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e14Hand, e14Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e14Hand)
 
 	}
 
@@ -1000,7 +714,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e15Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e15Hand, e15Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e15Hand)
 
 	}
 
@@ -1013,7 +727,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e16Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e16Hand, e16Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e16Hand)
 
 	}
 
@@ -1025,7 +739,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e17Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e17Hand, e17Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e17Hand)
 
 	}
 
@@ -1037,7 +751,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e18Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e18Hand, e18Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e18Hand)
 
 	}
 
@@ -1049,7 +763,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e19Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e19Hand, e19Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e19Hand)
 
 	}
 
@@ -1061,20 +775,7 @@ func compareMine() int { /// Search thorugh all hand combinations to find best
 		fHighCardArr = e20Hand
 	} else if nRank == fRank {
 		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e20Hand, e20Suits)
-
-	}
-
-	/// All community
-	e0Hand := []int{cc1[0], cc2[0], cc3[0], cc4[0], cc5[0]}
-	e0Suits := []int{cc1[1], cc2[1], cc3[1], cc4[1], cc5[1]}
-	nRank = makeHand(e0Hand, e0Suits)
-	if nRank < fRank {
-		fRank = nRank
-		fHighCardArr = e0Hand
-	} else if nRank == fRank {
-		fRank = nRank
-		fHighCardArr = searchAllRanks(fRank, e0Hand, e0Suits)
+		fHighCardArr = findBest(fRank, fHighCardArr, e20Hand)
 
 	}
 

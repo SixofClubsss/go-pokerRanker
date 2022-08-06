@@ -97,6 +97,21 @@ func getHands(totalHands int) { /// Gets card values for totalHands selected
 
 }
 
+func getHighPair(h [5]int) int { /// Gets high pair from hand
+
+	var highPair int
+
+	for i := 0; i < 4; i++ {
+		if h[i] == h[i+1] {
+			if h[i] > highPair {
+				highPair = h[i]
+			}
+		}
+	}
+
+	return highPair
+}
+
 func getHand1() int { /// Splitting card value and suit for making individual hand, highcard value and rank
 	for {
 		fmt.Println("Input the card values for Player 1: ")
@@ -143,33 +158,7 @@ func getHand1() int { /// Splitting card value and suit for making individual ha
 
 	Rank := makeHand()
 
-	if pc1[0] == 1 {
-		p1HighCardArr[0] = 14
-	}
-
-	if pc2[0] == 1 {
-		p1HighCardArr[1] = 14
-	}
-
-	if pc3[0] == 1 {
-		p1HighCardArr[2] = 14
-	}
-
-	if pc4[0] == 1 {
-		p1HighCardArr[3] = 14
-	}
-
-	if pc5[0] == 1 {
-		p1HighCardArr[4] = 14
-	}
-
-	for i := 0; i < 4; i++ {
-		if p1HighCardArr[i] == p1HighCardArr[i+1] {
-			if p1HighCardArr[i] > p1HighPair {
-				p1HighPair = p1HighCardArr[i]
-			}
-		}
-	}
+	p1HighPair = getHighPair(p1HighCardArr)
 
 	return Rank
 }
@@ -220,33 +209,7 @@ func getHand2() int {
 
 	Rank := makeHand()
 
-	if pc1[0] == 1 {
-		p2HighCardArr[0] = 14
-	}
-
-	if pc2[0] == 1 {
-		p2HighCardArr[1] = 14
-	}
-
-	if pc3[0] == 1 {
-		p2HighCardArr[2] = 14
-	}
-
-	if pc4[0] == 1 {
-		p2HighCardArr[3] = 14
-	}
-
-	if pc5[0] == 1 {
-		p2HighCardArr[4] = 14
-	}
-
-	for i := 0; i < 4; i++ {
-		if p2HighCardArr[i] == p2HighCardArr[i+1] {
-			if p2HighCardArr[i] > p2HighPair {
-				p2HighPair = p2HighCardArr[i]
-			}
-		}
-	}
+	p2HighPair = getHighPair(p2HighCardArr)
 
 	return Rank
 }
@@ -297,33 +260,7 @@ func getHand3() int {
 
 	Rank := makeHand()
 
-	if pc1[0] == 1 {
-		p3HighCardArr[0] = 14
-	}
-
-	if pc2[0] == 1 {
-		p3HighCardArr[1] = 14
-	}
-
-	if pc3[0] == 1 {
-		p3HighCardArr[2] = 14
-	}
-
-	if pc4[0] == 1 {
-		p3HighCardArr[3] = 14
-	}
-
-	if pc5[0] == 1 {
-		p3HighCardArr[4] = 14
-	}
-
-	for i := 0; i < 4; i++ {
-		if p3HighCardArr[i] == p3HighCardArr[i+1] {
-			if p3HighCardArr[i] > p3HighPair {
-				p3HighPair = p3HighCardArr[i]
-			}
-		}
-	}
+	p3HighPair = getHighPair(p3HighCardArr)
 
 	return Rank
 }
@@ -374,33 +311,7 @@ func getHand4() int {
 
 	Rank := makeHand()
 
-	if pc1[0] == 1 {
-		p4HighCardArr[0] = 14
-	}
-
-	if pc2[0] == 1 {
-		p4HighCardArr[1] = 14
-	}
-
-	if pc3[0] == 1 {
-		p4HighCardArr[2] = 14
-	}
-
-	if pc4[0] == 1 {
-		p4HighCardArr[3] = 14
-	}
-
-	if pc5[0] == 1 {
-		p4HighCardArr[4] = 14
-	}
-
-	for i := 0; i < 4; i++ {
-		if p4HighCardArr[i] == p4HighCardArr[i+1] {
-			if p4HighCardArr[i] > p4HighPair {
-				p4HighPair = p4HighCardArr[i]
-			}
-		}
-	}
+	p4HighPair = getHighPair(p4HighCardArr)
 
 	return Rank
 }
@@ -451,33 +362,7 @@ func getHand5() int {
 
 	Rank := makeHand()
 
-	if pc1[0] == 1 {
-		p5HighCardArr[0] = 14
-	}
-
-	if pc2[0] == 1 {
-		p5HighCardArr[1] = 14
-	}
-
-	if pc3[0] == 1 {
-		p5HighCardArr[2] = 14
-	}
-
-	if pc4[0] == 1 {
-		p5HighCardArr[3] = 14
-	}
-
-	if pc5[0] == 1 {
-		p5HighCardArr[4] = 14
-	}
-
-	for i := 0; i < 4; i++ {
-		if p5HighCardArr[i] == p5HighCardArr[i+1] {
-			if p5HighCardArr[i] > p5HighPair {
-				p5HighPair = p5HighCardArr[i]
-			}
-		}
-	}
+	p5HighPair = getHighPair(p5HighCardArr)
 
 	return Rank
 }
@@ -528,33 +413,7 @@ func getHand6() int {
 
 	Rank := makeHand()
 
-	if pc1[0] == 1 {
-		p6HighCardArr[0] = 14
-	}
-
-	if pc2[0] == 1 {
-		p6HighCardArr[1] = 14
-	}
-
-	if pc3[0] == 1 {
-		p6HighCardArr[2] = 14
-	}
-
-	if pc4[0] == 1 {
-		p6HighCardArr[3] = 14
-	}
-
-	if pc5[0] == 1 {
-		p6HighCardArr[4] = 14
-	}
-
-	for i := 0; i < 4; i++ {
-		if p6HighCardArr[i] == p6HighCardArr[i+1] {
-			if p6HighCardArr[i] > p6HighPair {
-				p6HighPair = p6HighCardArr[i]
-			}
-		}
-	}
+	p6HighPair = getHighPair(p6HighCardArr)
 
 	return Rank
 }
