@@ -1,8 +1,24 @@
 /*
-	dReam Tables Poker Hand Ranker
-	Originally written in C++ and used in dReam Tables Dero Poker Tables
-	https://dreamtables.net
-	Translated to go
+dReam Tables Poker Hand Ranker - Holdem
+
+Copyright (C) 2022  dReam Tables
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Always play responsibly.
+
+https://dreamtables.net
 */
 
 package main
@@ -497,17 +513,12 @@ func findBest(r int, fR, h []int) []int { /// If better hand exists when compari
 			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[0]}
 		} else if hole[1] == swap[4]+1 {
 			swap = []int{swap[1], swap[2], swap[3], swap[4], hole[1]}
-		}
-		/// If pocket pair
-	} else if hole[0] == hole[1] {
-		if hole[0] > swap[0] && swap[0] == swap[1] && swap[1] != swap[2] {
-			swap = []int{hole[0], hole[1], swap[2], swap[3], swap[4]}
-		} else if hole[0] > swap[1] && swap[1] == swap[2] && swap[2] != swap[3] {
-			swap = []int{swap[0], hole[0], hole[1], swap[3], swap[4]}
-		} else if hole[0] > swap[2] && swap[2] == swap[3] && swap[3] != swap[4] {
-			swap = []int{swap[0], swap[1], hole[0], hole[1], swap[4]}
-		} else if hole[0] > swap[3] && swap[3] == swap[4] {
-			swap = []int{swap[0], swap[1], swap[2], hole[0], hole[1]}
+		} else if swap[0] == 2 && swap[1] == 3 && swap[2] == 4 && swap[3] == 5 && swap[4] == 14 && hole[0] == 6 && hole[1] == 7 {
+			swap = []int{swap[1], swap[2], swap[3], hole[0], hole[1]}
+		} else if swap[0] == 2 && swap[1] == 3 && swap[2] == 4 && swap[3] == 5 && swap[4] == 14 && hole[0] == 6 {
+			swap = []int{swap[0], swap[1], swap[2], swap[3], hole[0]}
+		} else if swap[0] == 2 && swap[1] == 3 && swap[2] == 4 && swap[3] == 5 && swap[4] == 14 && hole[1] == 6 {
+			swap = []int{swap[0], swap[1], swap[2], hole[3], hole[1]}
 		}
 		/// If full house
 	} else if r == 4 && hole[0] == hole[1] {
@@ -526,7 +537,6 @@ func findBest(r int, fR, h []int) []int { /// If better hand exists when compari
 	}
 
 	return swap[:]
-
 }
 
 func compareThese() int { /// Search thorugh all hand combinations to find best

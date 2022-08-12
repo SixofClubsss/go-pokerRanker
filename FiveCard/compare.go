@@ -1,8 +1,24 @@
 /*
-	dReam Tables Poker Hand Ranker
-	Originally written in C++ and used in dReam Tables Dero Poker Tables
-	https://dreamtables.net
-	Translated to go
+dReam Tables Poker Hand Ranker - Five Card
+
+Copyright (C) 2022  dReam Tables
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Always play responsibly.
+
+https://dreamtables.net
 */
 
 package main
@@ -322,7 +338,7 @@ func suitSplit(card int) { /// Splits cards inside getHand#() funcs
 	switch card {
 	////// Spades
 	case 1:
-		arrSplit[0] = 1
+		arrSplit[0] = 14
 		arrSplit[1] = 0
 
 	case 2:
@@ -375,162 +391,162 @@ func suitSplit(card int) { /// Splits cards inside getHand#() funcs
 
 		////// Hearts
 	case 14:
-		arrSplit[0] = 1
-		arrSplit[1] = 1
+		arrSplit[0] = 14
+		arrSplit[1] = 13
 
 	case 15:
 		arrSplit[0] = 2
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 16:
 		arrSplit[0] = 3
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 17:
 		arrSplit[0] = 4
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 18:
 		arrSplit[0] = 5
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 19:
 		arrSplit[0] = 6
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 20:
 		arrSplit[0] = 7
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 21:
 		arrSplit[0] = 8
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 22:
 		arrSplit[0] = 9
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 23:
 		arrSplit[0] = 10
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 24:
 		arrSplit[0] = 11
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 25:
 		arrSplit[0] = 12
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 	case 26:
 		arrSplit[0] = 13
-		arrSplit[1] = 1
+		arrSplit[1] = 13
 
 		////// Clubs
 	case 27:
-		arrSplit[0] = 1
-		arrSplit[1] = 2
+		arrSplit[0] = 14
+		arrSplit[1] = 26
 
 	case 28:
 		arrSplit[0] = 2
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 29:
 		arrSplit[0] = 3
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 30:
 		arrSplit[0] = 4
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 31:
 		arrSplit[0] = 5
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 32:
 		arrSplit[0] = 6
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 33:
 		arrSplit[0] = 7
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 34:
 		arrSplit[0] = 8
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 35:
 		arrSplit[0] = 9
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 36:
 		arrSplit[0] = 10
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 37:
 		arrSplit[0] = 11
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 38:
 		arrSplit[0] = 12
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 	case 39:
 		arrSplit[0] = 13
-		arrSplit[1] = 2
+		arrSplit[1] = 26
 
 		////// Diamonds
 	case 40:
-		arrSplit[0] = 1
-		arrSplit[1] = 3
+		arrSplit[0] = 14
+		arrSplit[1] = 39
 
 	case 41:
 		arrSplit[0] = 2
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 42:
 		arrSplit[0] = 3
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 43:
 		arrSplit[0] = 4
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 44:
 		arrSplit[0] = 5
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 45:
 		arrSplit[0] = 6
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 46:
 		arrSplit[0] = 7
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 47:
 		arrSplit[0] = 8
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 48:
 		arrSplit[0] = 9
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 49:
 		arrSplit[0] = 10
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 50:
 		arrSplit[0] = 11
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 51:
 		arrSplit[0] = 12
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	case 52:
 		arrSplit[0] = 13
-		arrSplit[1] = 3
+		arrSplit[1] = 39
 
 	}
 }

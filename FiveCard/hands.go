@@ -1,8 +1,24 @@
 /*
-	dReam Tables Poker Hand Ranker
-	Originally written in C++ and used in dReam Tables Dero Poker Tables
-	https://dreamtables.net
-	Translated to go
+dReam Tables Poker Hand Ranker - Five Card
+
+Copyright (C) 2022  dReam Tables
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Always play responsibly.
+
+https://dreamtables.net
 */
 
 package main
@@ -426,7 +442,7 @@ func makeHand() int { /// Determines hand rank after suit slipt
 	sort.Ints(pHand)
 
 	/// Royal flush
-	if pHand[0] == 1 && pHand[1] == 10 && pHand[2] == 11 && pHand[3] == 12 && pHand[4] == 13 &&
+	if pHand[0] == 10 && pHand[1] == 11 && pHand[2] == 12 && pHand[3] == 13 && pHand[4] == 14 &&
 		pSuits[0] == pSuits[1] && pSuits[0] == pSuits[2] && pSuits[0] == pSuits[3] && pSuits[0] == pSuits[4] {
 
 		return 1
@@ -434,8 +450,10 @@ func makeHand() int { /// Determines hand rank after suit slipt
 	}
 
 	/// Straight flush
-	if pHand[0]+1 == pHand[1] && pHand[1]+1 == pHand[2] && pHand[2]+1 == pHand[3] && pHand[3]+1 == pHand[4] && pHand[0]+4 == pHand[4] &&
-		pSuits[0] == pSuits[1] && pSuits[0] == pSuits[2] && pSuits[0] == pSuits[3] && pSuits[0] == pSuits[4] {
+	if (pHand[0]+1 == pHand[1] && pHand[1]+1 == pHand[2] && pHand[2]+1 == pHand[3] && pHand[3]+1 == pHand[4] && pHand[0]+4 == pHand[4] &&
+		pSuits[0] == pSuits[1] && pSuits[0] == pSuits[2] && pSuits[0] == pSuits[3] && pSuits[0] == pSuits[4]) ||
+		(pHand[0] == 2 && pHand[1] == 3 && pHand[2] == 4 && pHand[3] == 5 && pHand[4] == 14 &&
+			pSuits[0] == pSuits[1] && pSuits[0] == pSuits[2] && pSuits[0] == pSuits[3] && pSuits[0] == pSuits[4]) {
 
 		return 2
 	}
@@ -462,7 +480,7 @@ func makeHand() int { /// Determines hand rank after suit slipt
 
 	/// Straight
 	if pHand[0]+1 == pHand[1] && pHand[1]+1 == pHand[2] && pHand[2]+1 == pHand[3] && pHand[3]+1 == pHand[4] && pHand[0]+4 == pHand[4] ||
-		pHand[0] == 1 && pHand[1] == 10 && pHand[2] == 11 && pHand[3] == 12 && pHand[4] == 13 {
+		pHand[0] == 2 && pHand[1] == 3 && pHand[2] == 4 && pHand[3] == 5 && pHand[4] == 14 {
 		return 6
 	}
 
