@@ -519,6 +519,8 @@ func findBest(r int, fR, h []int) []int { /// If better hand exists when compari
 			swap = []int{swap[0], swap[1], swap[2], swap[3], hole[0]}
 		} else if swap[0] == 2 && swap[1] == 3 && swap[2] == 4 && swap[3] == 5 && swap[4] == 14 && hole[1] == 6 {
 			swap = []int{swap[0], swap[1], swap[2], hole[3], hole[1]}
+		} else if hand[0] == swap[0]+1 && hand[1] == swap[1]+1 && hand[2] == swap[2]+1 && hand[3] == swap[3]+1 && hand[4] == swap[4]+1 {
+			swap = []int{hand[0], hand[1], hand[2], hand[3], hand[4]}
 		}
 		/// If full house
 	} else if r == 4 && hole[0] == hole[1] {
