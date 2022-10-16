@@ -55,6 +55,12 @@ var p3HighPair int
 var p4HighPair int
 var p5HighPair int
 var p6HighPair int
+var p1LowPair int
+var p2LowPair int
+var p3LowPair int
+var p4LowPair int
+var p5LowPair int
+var p6LowPair int
 var p1Rank int
 var p2Rank int
 var p3Rank int
@@ -203,7 +209,7 @@ func getHand1() int { /// Splitting card value and suit for making individual ha
 
 	Rank := compareThese()
 	copy(p1HighCardArr[:], fHighCardArr)
-	p1HighPair = getHighPair(p1HighCardArr)
+	p1HighPair, p1LowPair = getHighPair(p1HighCardArr)
 
 	return Rank
 }
@@ -241,7 +247,7 @@ func getHand2() int {
 
 	Rank := compareThese()
 	copy(p2HighCardArr[:], fHighCardArr)
-	p2HighPair = getHighPair(p2HighCardArr)
+	p2HighPair, p2LowPair = getHighPair(p2HighCardArr)
 
 	return Rank
 }
@@ -279,7 +285,7 @@ func getHand3() int {
 
 	Rank := compareThese()
 	copy(p3HighCardArr[:], fHighCardArr)
-	p3HighPair = getHighPair(p3HighCardArr)
+	p3HighPair, p3LowPair = getHighPair(p3HighCardArr)
 
 	return Rank
 }
@@ -317,7 +323,7 @@ func getHand4() int {
 
 	Rank := compareThese()
 	copy(p4HighCardArr[:], fHighCardArr)
-	p4HighPair = getHighPair(p4HighCardArr)
+	p4HighPair, p4LowPair = getHighPair(p4HighCardArr)
 
 	return Rank
 }
@@ -355,7 +361,7 @@ func getHand5() int {
 
 	Rank := compareThese()
 	copy(p5HighCardArr[:], fHighCardArr)
-	p5HighPair = getHighPair(p5HighCardArr)
+	p5HighPair, p5LowPair = getHighPair(p5HighCardArr)
 
 	return Rank
 }
@@ -393,7 +399,7 @@ func getHand6() int {
 
 	Rank := compareThese()
 	copy(p6HighCardArr[:], fHighCardArr)
-	p6HighPair = getHighPair(p6HighCardArr)
+	p6HighPair, p6LowPair = getHighPair(p6HighCardArr)
 
 	return Rank
 }
@@ -474,9 +480,10 @@ func makeHand(h, s []int) int { /// Determines hand rank after suit slipt
 	}
 }
 
-func getHighPair(h [5]int) int { /// Gets high pair from hand
+func getHighPair(h [5]int) (int, int) { /// Gets high pair from hand
 
 	var highPair int
+	var lowPair int
 
 	for i := 0; i < 4; i++ {
 		if h[i] == h[i+1] {
@@ -486,7 +493,14 @@ func getHighPair(h [5]int) int { /// Gets high pair from hand
 		}
 	}
 
-	return highPair
+	for i := 0; i < 4; i++ {
+		if h[i] == h[i+1] {
+			if h[i] < highPair {
+				lowPair = h[i]
+			}
+		}
+	}
+	return highPair, lowPair
 }
 
 func findBest(r int, fR, h []int) []int { /// If better hand exists when comparing
