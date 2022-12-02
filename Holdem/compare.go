@@ -175,32 +175,31 @@ func compareAll() { /// Main compare to determine winner
 			if p6Rank == winningRank[0] {
 				fmt.Println("Player 6 Wins (HighPair Compare)")
 			}
-		} else if winningRank[0] == 8 {
-			if p1LowPair > p2LowPair && p1LowPair > p3LowPair && p1LowPair > p4LowPair && p1LowPair > p5LowPair && p1LowPair > p6LowPair {
-				if p1Rank == winningRank[0] {
-					fmt.Println("Player 1 Wins (LowPair Compare)")
-				}
-			} else if p2LowPair > p1LowPair && p2LowPair > p3LowPair && p2LowPair > p4LowPair && p2LowPair > p5LowPair && p2LowPair > p6LowPair {
-				if p2Rank == winningRank[0] {
-					fmt.Println("Player 2 Wins (LowPair Compare)")
-				}
-			} else if p3LowPair > p1LowPair && p3LowPair > p2LowPair && p3LowPair > p4LowPair && p3LowPair > p5LowPair && p3LowPair > p6LowPair {
-				if p3Rank == winningRank[0] {
-					fmt.Println("Player 3 Wins (LowPair Compare)")
-				}
-			} else if p4LowPair > p1LowPair && p4LowPair > p2LowPair && p4LowPair > p3LowPair && p4LowPair > p5LowPair && p4LowPair > p6LowPair {
-				if p4Rank == winningRank[0] {
-					fmt.Println("Player 4 Wins (LowPair Compare)")
-				}
-			} else if p5LowPair > p1LowPair && p5LowPair > p2LowPair && p5LowPair > p3LowPair && p5LowPair > p4LowPair && p5LowPair > p6LowPair {
-				if p5Rank == winningRank[0] {
-					fmt.Println("Player 5 Wins (LowPair Compare)")
-				}
-			} else if p6LowPair > p1LowPair && p6LowPair > p2LowPair && p6LowPair > p3LowPair && p6LowPair > p4LowPair && p6LowPair > p5LowPair {
-				if p6Rank == winningRank[0] {
-					fmt.Println("Player 6 Wins (LowPair Compare)")
-				}
+		} else if winningRank[0] == 8 && p1LowPair > p2LowPair && p1LowPair > p3LowPair && p1LowPair > p4LowPair && p1LowPair > p5LowPair && p1LowPair > p6LowPair {
+			if p1Rank == winningRank[0] {
+				fmt.Println("Player 1 Wins (LowPair Compare)")
 			}
+		} else if winningRank[0] == 8 && p2LowPair > p1LowPair && p2LowPair > p3LowPair && p2LowPair > p4LowPair && p2LowPair > p5LowPair && p2LowPair > p6LowPair {
+			if p2Rank == winningRank[0] {
+				fmt.Println("Player 2 Wins (LowPair Compare)")
+			}
+		} else if winningRank[0] == 8 && p3LowPair > p1LowPair && p3LowPair > p2LowPair && p3LowPair > p4LowPair && p3LowPair > p5LowPair && p3LowPair > p6LowPair {
+			if p3Rank == winningRank[0] {
+				fmt.Println("Player 3 Wins (LowPair Compare)")
+			}
+		} else if winningRank[0] == 8 && p4LowPair > p1LowPair && p4LowPair > p2LowPair && p4LowPair > p3LowPair && p4LowPair > p5LowPair && p4LowPair > p6LowPair {
+			if p4Rank == winningRank[0] {
+				fmt.Println("Player 4 Wins (LowPair Compare)")
+			}
+		} else if winningRank[0] == 8 && p5LowPair > p1LowPair && p5LowPair > p2LowPair && p5LowPair > p3LowPair && p5LowPair > p4LowPair && p5LowPair > p6LowPair {
+			if p5Rank == winningRank[0] {
+				fmt.Println("Player 5 Wins (LowPair Compare)")
+			}
+		} else if winningRank[0] == 8 && p6LowPair > p1LowPair && p6LowPair > p2LowPair && p6LowPair > p3LowPair && p6LowPair > p4LowPair && p6LowPair > p5LowPair {
+			if p6Rank == winningRank[0] {
+				fmt.Println("Player 6 Wins (LowPair Compare)")
+			}
+
 			/// No outright or HighPair win so we comapre all left over hands to determine HighCard winner
 		} else if (p1HighCardArr[4] > p2HighCardArr[4] && p1HighCardArr[4] > p3HighCardArr[4] && p1HighCardArr[4] > p4HighCardArr[4] && p1HighCardArr[4] > p5HighCardArr[4] && p1HighCardArr[4] > p6HighCardArr[4]) ||
 
